@@ -234,7 +234,7 @@ class SafeCreationTx:
         """
         return self._build_proxy_contract_creation_constructor(
             master_copy, initializer, funder, payment_token, payment
-        ).buildTransaction(
+        ).build_transaction(
             {
                 "gas": gas,
                 "gasPrice": gas_price,
@@ -327,7 +327,7 @@ class SafeCreationTx:
                 NULL_ADDRESS,  # Contract address for optional delegate call
                 b"",  # Data payload for optional delegate call
             )
-            .buildTransaction(
+            .build_transaction(
                 {
                     "gas": 1,
                     "gasPrice": 1,
